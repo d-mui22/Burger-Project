@@ -19,6 +19,7 @@ const buildControls = (props) => {
           type={control.type}
           addIngredient={() => props.addIngredient(control.type)}
           removeIngredient={() => props.removeIngredient(control.type)}
+          disableButton={props.disabled[control.type]}
         />
       ))}
     </div>
