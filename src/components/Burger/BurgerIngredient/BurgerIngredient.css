@@ -82,7 +82,7 @@
 
 
 .Meat {
-    width: 90%;
+    width: 93%;
     height: 8%;
     background: linear-gradient(#7f3608, #702e05);
     margin: 2% auto;
@@ -90,7 +90,7 @@
 }
 
 .Cheese {
-    width: 95%;
+    width: 100%;
     height: 4.5%;
     margin: 2% auto;
     background: linear-gradient(#f4d004, #d6bb22);
@@ -98,15 +98,15 @@
 }
 
 .Lettuce {
-    width: 93%;
-    height: 7%;
+    width: 95%;
+    height: 4%;
     margin: 2% auto;
     background: linear-gradient(#228c1d, #91ce50);
     border-radius: 20px;
 }
 
 .Bacon {
-    width: 92%;
+    width: 96%;
     height: 3%;
     background: linear-gradient(#bf3813, #c45e38);
     margin: 2% auto;
