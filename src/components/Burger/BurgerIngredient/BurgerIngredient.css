@@ -80,8 +80,7 @@
     box-shadow: inset 1px 3px #c9c9c9;
   }
 
-
-.Meat {
+.Beef {
     width: 93%;
     height: 8%;
     background: linear-gradient(#7f3608, #702e05);
@@ -90,11 +89,19 @@
 }
 
 .Cheese {
-    width: 100%;
-    height: 4.5%;
+    width: 95%;
+    height: 2.5%;
     margin: 2% auto;
     background: linear-gradient(#f4d004, #d6bb22);
     border-radius: 20px;
+}
+
+.Tomato {
+    width: 93%;
+    height: 5.5%;
+    margin: 2% auto;
+    background: linear-gradient(#EE1515, #CF1313);
+    border-radius: 9px;
 }
 
 .Lettuce {
