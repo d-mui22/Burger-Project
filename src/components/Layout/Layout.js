@@ -1,13 +1,13 @@
-import React, {fragment} from 'react'
+import React, {Fragment} from 'react'
 import classes from './Layout.css'
 
 const layout = (props) => (
-  <fragment>
+  <Fragment>
     <div>ToolBar, Sidedrawer, Backdrop</div>
     <main className={classes.Content}>
       {props.children}
     </main>
-  </fragment>
+  </Fragment>
 )
 
 export default layout
