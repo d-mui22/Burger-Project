@@ -20,8 +20,8 @@ class BurgerBuilder extends Component {
   state = {
     ingredients: {
       bacon: 0,
-      cheese: 0,
-      beef: 0,
+      cheese: 1,
+      beef: 1,
       tomato: 0,
       lettuce: 0,
     },
@@ -75,11 +75,11 @@ class BurgerBuilder extends Component {
         <Burger
           ingredients = {this.state.ingredients}
         />
-        <div>{this.state.totalPrice}</div>
         <BuildControls
           ingredientChecker={ingredientChecker}
           addIngredient={this.addIngredientHandler}
           removeIngredient={this.removeIngredientHandler}
+          price={this.state.totalPrice}
         />
       </Fragment>
     )
