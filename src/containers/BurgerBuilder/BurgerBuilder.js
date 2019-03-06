@@ -5,8 +5,9 @@ import BuildControls from '../../components/Burger/BuildControls/BuildControls'
 const INGREDIENT_PRICES = {
   lettuce: .25,
   cheese: .5,
-  meat: 1,
-  bacon: 1
+  beef: 1,
+  bacon: 1,
+  tomato: .5
 }
 
 class BurgerBuilder extends Component {
@@ -19,9 +20,10 @@ class BurgerBuilder extends Component {
   state = {
     ingredients: {
       bacon: 0,
-      meat: 1,
-      lettuce: 1,
-      cheese: 1
+      cheese: 0,
+      beef: 0,
+      tomato: 0,
+      lettuce: 0,
     },
     totalPrice: 5
   }
@@ -62,19 +64,20 @@ class BurgerBuilder extends Component {
   }
 
   render () {
-    const disableButton = {
+    const ingredientChecker = {
       ...this.state.ingredients
     }
-    for (let key in disableButton) {
-      disableButton[key] = disableButton[key] <= 0
+    for (let key in ingredientChecker) {
+      ingredientChecker[key] = ingredientChecker[key] <= 0
     }
     return (
       <Fragment>
         <Burger
           ingredients = {this.state.ingredients}
         />
+        <div>{this.state.totalPrice}</div>
         <BuildControls
-          disabled={disableButton}
+          ingredientChecker={ingredientChecker}
           addIngredient={this.addIngredientHandler}
           removeIngredient={this.removeIngredientHandler}
         />

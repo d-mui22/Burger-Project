@@ -3,10 +3,11 @@ import BuildControl from './BuildControl/BuildControl'
 import classes from './BuildControls.css'
 
 const controls = [
-  {label: 'Meat', type: 'meat'},
-  {label: 'Bacon', type: 'bacon'},
+  {label: 'Beef', type: 'beef'},
   {label: 'Cheese', type: 'cheese'},
+  {label: 'Bacon', type: 'bacon'},
   {label: 'Lettuce', type: 'lettuce'},
+  {label: 'Tomato', type: 'tomato'},
 ]
 
 const buildControls = (props) => {
@@ -19,7 +20,7 @@ const buildControls = (props) => {
           type={control.type}
           addIngredient={() => props.addIngredient(control.type)}
           removeIngredient={() => props.removeIngredient(control.type)}
-          disableButton={props.disabled[control.type]}
+          ingredientChecker={props.ingredientChecker[control.type]}
         />
       ))}
     </div>
