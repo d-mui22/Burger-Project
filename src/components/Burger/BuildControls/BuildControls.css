@@ -1,5 +1,5 @@
 .BuildControls {
-  width: 65%;
+  width: 75%;
   background-color: #cf8f2e;
   display: flex;
   flex-flow: column;
@@ -7,14 +7,15 @@
   box-shadow: 0 2px 1px #ccc;
   margin: auto;
   border-radius: 20px;
+  margin-top: 15px;
+  padding-bottom: 10px;
 }
 
 .TotalPrice {
-  font-weight: bold;
-  font-size: 1.2rem;
-  border-bottom: 5px solid darkgreen;
+  font-size: 1.1rem;
+  border-bottom: 5px solid #000;
   width: 100%;
   text-align: center;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
   border-radius: 20px;
 }
