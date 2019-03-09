@@ -29,7 +29,14 @@ class BurgerBuilder extends Component {
       lettuce: 0,
     },
     totalPrice: 5,
-    purchaseable: true
+    purchaseable: true,
+    ordering: false
+  }
+
+  orderingHandler = () => {
+    this.setState({
+      ordering: true
+    })
   }
 
   restartHandler = () => {
@@ -105,7 +112,7 @@ class BurgerBuilder extends Component {
     }
     return (
       <Fragment>
-        <Modal>
+        <Modal show={this.state.ordering}>
           <OrderSummary
             ingredients={this.state.ingredients}
           />
@@ -120,6 +127,7 @@ class BurgerBuilder extends Component {
           price={this.state.totalPrice}
           purchaseable={this.state.purchaseable}
           restart={this.restartHandler}
+          ordering={this.orderingHandler}
         />
       </Fragment>
     )
