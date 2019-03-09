@@ -24,12 +24,15 @@ const buildControls = (props) => {
           ingredientChecker={props.ingredientChecker[control.type]}
         />
       ))}
-      <button
-        className={classes.OrderButton}
-        disabled={!props.purchaseable}>Order Now</button>
-      <button
-        className={classes.Restart}
-        onClick={props.restart}>Restart</button>
+      <div>
+        <button
+          className={classes.OrderButton}
+          onClick={props.ordering}
+          disabled={!props.purchaseable}>Order Now</button>
+        <button
+          className={classes.Restart}
+          onClick={props.restart}>Restart</button>
+      </div>
     </div>
   )
 }
