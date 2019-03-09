@@ -103,6 +103,12 @@ class BurgerBuilder extends Component {
     this.updatePurchaseHandler(updatedIngredients);
   }
 
+  modalCloseHandler = () => {
+    this.setState({
+      ordering: false
+    })
+  }
+
   render () {
     const ingredientChecker = {
       ...this.state.ingredients
@@ -112,7 +118,7 @@ class BurgerBuilder extends Component {
     }
     return (
       <Fragment>
-        <Modal show={this.state.ordering}>
+        <Modal show={this.state.ordering} modalClose={this.modalCloseHandler}>
           <OrderSummary
             ingredients={this.state.ingredients}
           />
