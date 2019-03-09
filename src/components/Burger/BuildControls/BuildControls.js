@@ -30,8 +30,9 @@ const buildControls = (props) => {
           onClick={props.ordering}
           disabled={!props.purchaseable}>Order Now</button>
         <button
-          className={classes.Restart}
-          onClick={props.restart}>Restart</button>
+          className={classes.ResetButton}
+          disabled={!props.purchaseable}
+          onClick={props.restart}>Reset</button>
       </div>
     </div>
   )
