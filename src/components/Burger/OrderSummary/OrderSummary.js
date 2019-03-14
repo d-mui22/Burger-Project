@@ -6,23 +6,29 @@ const orderSummary = (props) => {
     .map(ingredientKey => {
       return (
         <li key={ingredientKey}>
-          <span style={{textTransform: 'capitalize'}}>{ingredientKey}</span>: {props.ingredients[ingredientKey]}
+          <span style={{textTransform: 'capitalize'}}>{ingredientKey}</span>: <strong>{props.ingredients[ingredientKey]}</strong>
         </li>)
     })
   return(
     <Fragment>
-      <h3>Your Order</h3>
-      <p>Selected Ingredients</p>
-      <ul>
-        {ingredientSummary}
-      </ul>
-      <p>Price: <strong>{props.totalPrice.toFixed(2)}</strong></p>
-      <Button
-        clicked={props.continueOrder}
-        btnType='Success'>Continue</Button>
-      <Button
-        clicked={props.cancelOrder}
-        btnType='Fail'>Cancel</Button>
+      <div style={{textAlign: 'center'}}>
+        <h3 style={{marginBottom: '0'}}>Your Order</h3>
+        <h4 style={{textDecorationLine: 'underline', marginTop: '0'}}>Selected Ingredients</h4>
+      </div>
+      <div style={{marginLeft: '30%'}}>
+        <ul>
+          {ingredientSummary}
+        </ul>
+        <p>Price: <mark>$<strong>{props.totalPrice.toFixed(2)}</strong></mark></p>
+      </div>
+      <div style={{textAlign: 'center'}}>
+        <Button
+          clicked={props.continueOrder}
+          btnType='Success'>Continue</Button>
+        <Button
+          clicked={props.cancelOrder}
+          btnType='Fail'>Cancel</Button>
+      </div>
     </Fragment>
   )
 }
