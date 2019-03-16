@@ -17,7 +17,7 @@ const sideDrawer = (props) => {
         show={props.open}
         clicked={props.close}
       />
-    <div className={showOrHide.join(' ')}>
+      <div className={showOrHide.join(' ')}>
         <div className={classes.Logo}>
           <Logo/>
         </div>
