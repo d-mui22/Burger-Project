@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './Toolbar.css'
 import Logo from '../../Logo/Logo'
-import Items from '../Items/Items'
+import Links from '../Links/Links'
 import Toggle from '../SideDrawer/Toggle/Toggle'
 
 const toolbar = (props) => {
@@ -14,7 +14,7 @@ const toolbar = (props) => {
         <Logo />
       </div>
       <nav className={classes.DesktopOnly}>
-        <Items/>
+        <Links/>
       </nav>
     </header>
   )
