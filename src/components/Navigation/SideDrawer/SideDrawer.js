@@ -7,15 +7,15 @@ import Backdrop from '../../UI/Backdrop/Backdrop'
 const sideDrawer = (props) => {
   let showOrHide = [classes.SideDrawer, classes.Close]
 
-  if (props.open) {
+  if (props.sideDrawerState) {
     showOrHide = [classes.SideDrawer, classes.Open]
   }
 
   return(
     <Fragment>
       <Backdrop
-        show={props.open}
-        clicked={props.close}
+        show={props.sideDrawerState}
+        clicked={props.closeSideDrawer}
       />
       <div className={showOrHide.join(' ')}>
         <div className={classes.Logo}>
