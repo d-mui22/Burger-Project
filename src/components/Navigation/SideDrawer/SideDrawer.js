@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react'
 import Logo from '../../Logo/Logo'
-import Items from '../Items/Items'
+import Links from '../Links/Links'
 import classes from './SideDrawer.css'
 import Backdrop from '../../UI/Backdrop/Backdrop'
 
@@ -22,7 +22,7 @@ const sideDrawer = (props) => {
           <Logo/>
         </div>
         <nav>
-          <Items/>
+          <Links/>
         </nav>
       </div>
     </Fragment>
