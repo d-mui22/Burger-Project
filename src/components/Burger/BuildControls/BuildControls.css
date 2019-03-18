@@ -9,7 +9,6 @@
   border-radius: 20px;
   margin-bottom: 10px;
   padding-bottom: 10px;
-  margin-top: 0;
 }
 
 .TotalPrice {
@@ -74,4 +73,11 @@
   100% {
     transform: scale(1);
   }
+}
+
+@media (max-width: 500px) {
+  .BuildControls {
+    width: 300px;
+  }
+
 }
