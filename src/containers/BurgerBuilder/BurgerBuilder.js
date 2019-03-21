@@ -3,7 +3,6 @@ import Burger from '../../components/Burger/Burger'
 import BuildControls from '../../components/Burger/BuildControls/BuildControls'
 import Modal from '../../components/UI/Modal/Modal'
 import OrderSummary from '../../components/Burger/OrderSummary/OrderSummary'
-import classes from './BurgerBuilder.css'
 
 const INGREDIENT_PRICES = {
   lettuce: .25,
@@ -131,7 +130,7 @@ class BurgerBuilder extends Component {
             continueOrder={this.continueOrderHandler}
           />
         </Modal>
-        <div className={classes.BurgerBuilder}>
+        <div>
         <Burger
           ingredients = {this.state.ingredients}
         />

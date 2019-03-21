@@ -2,14 +2,15 @@ import React, {Component, Fragment} from 'react'
 import Button from '../../UI/Button/Button'
 
 class OrderSummary extends Component {
-  
+
   render () {
     const ingredientSummary = Object.keys(this.props.ingredients)
       .map(ingredientKey => {
         return (
           <li key={ingredientKey}>
             <span style={{textTransform: 'capitalize'}}>{ingredientKey}</span>: <strong>{this.props.ingredients[ingredientKey]}</strong>
-          </li>)
+          </li>
+        )
       })
 
     return (

@@ -18,3 +18,9 @@
     height: 300px;
   }
 }
+
+@media (max-width: 500px) {
+  .Modal {
+    margin-left: -18%;
+  }
+}
